@@ -1,15 +1,7 @@
 const express = require("express");
-const { Pool } = require("pg");
+const pool = require("./db");
 const app = express();
 const PORT = 3000;
-
-const pool = new Pool({
-  user: "student",
-  host: "localhost",
-  database: "express_task_manager",
-  password: "password",
-  port: 5432,
-});
 
 app.use(express.json());
 
